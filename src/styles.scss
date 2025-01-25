@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-color: #3059C8;
+    --bg-color: #09000E;
+    --text-primary: #FFF;
+    --text-secondary: #BDBDBD;
+    --text-accent: #59B4FF;
+}
+
+* {
+    font-family: "Crimson Pro", sans-serif;
+    // font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+button {
+    border: none;
+}
+
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+  
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.crimson-pro-bold {
+    font-family: "Crimson Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
