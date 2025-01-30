@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+// Variables for shared styles
+$font-primary: "Crimson Pro";
+$font-secondary: "Poppins";
+$text-accent: var(--text-accent);
+$text-secondary: var(--text-secondary);
+$bg-hover: #ffffff11;
+
+// Mixin for text styles
+@mixin text-style($font-family, $size, $weight, $color: inherit) {
+    font-family: $font-family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
 
 :root {
     --primary-color: #3059C8;
@@ -6,6 +20,7 @@
     --text-primary: #FFF;
     --text-secondary: #BDBDBD;
     --text-accent: #59B4FF;
+    --bg-hover-color: #19111E;
 }
 
 * {
@@ -15,6 +30,20 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--text-primary);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--bg-hover-color);        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);    /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 2px solid var(--bg-hover-color); /* creates padding around scroll thumb */
 }
 
 .container {
@@ -49,4 +78,56 @@ button {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+
+/* Quando o item estiver sendo arrastado */
+.cdk-drag-preview {
+    display: flex;
+    gap: 20px;
+    transition: 100ms ease-out;
+
+    transform: rotate(3deg);
+    opacity: 0.9;
+    background: var(--bg-hover-color);  
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(3deg);
+
+    .position {
+        @include text-style($font-primary, 36px, 400, $text-secondary);
+    }
+
+    img {
+        width: 90px;
+        margin-bottom: auto;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            @include text-style($font-primary, 24px, 700);
+        }
+
+        .short-description {
+            @include text-style($font-secondary, 18px, 400, $text-secondary);
+        }
+
+        .year {
+            @include text-style($font-primary, 18px, 400, $text-accent);
+        }
+    }
+}
+
+/* Efeito enquanto o item está sendo arrastado */
+.cdk-drag-placeholder {
+    opacity: 0.5;
+    border: 2px dashed var(--primary-color);
+}
+
+/* Área onde o item pode ser solto */
+.cdk-drop-list-dragging .game-item {
+    opacity: 0.8;
 }

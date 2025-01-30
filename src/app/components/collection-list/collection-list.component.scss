@@ -1,0 +1,33 @@
+// Variables for shared styles
+$font-primary: "Crimson Pro";
+$font-secondary: "Poppins";
+$text-accent: var(--text-accent);
+$text-secondary: var(--text-secondary);
+$bg-hover: #ffffff11;
+
+// Mixin for text styles
+@mixin text-style($font-family, $size, $weight, $color: inherit) {
+    font-family: $font-family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+.collection-list {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+
+    .no-collections {
+        color: red;
+    }
+
+    .collection-name {
+        @include text-style($font-primary, 24px, 400, $text-secondary);
+        cursor: pointer;
+
+        &.active {
+            color: $text-accent;
+        }
+    }
+}

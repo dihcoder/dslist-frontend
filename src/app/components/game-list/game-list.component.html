@@ -1,0 +1,31 @@
+<div class="collection-games-wrapper">
+
+    <h2 class="games-found-counter">Itens encontrados: <span class="count">{{ gamesCount() }}</span></h2>
+
+    <ul cdkDropList class="game-list" (cdkDropListDropped)="drop($event)">
+        <li *ngFor="let game of gameList(); let i = index; trackBy: trackById" cdkDrag class="game">
+            <span class="position">{{ (i + 1) }}</span>
+            <img [src]="game.imgUrl" alt="">
+            <div class="info">
+                <h3>{{ game.title }}</h3>
+                <p class="short-description">{{ game.shortDescription }}</p>
+                <p class="year">{{ game.year }}</p>
+            </div>
+        </li>
+
+        <!-- @for (game of gameList(); track game.id) {
+        <li class="game" (click)="handleClick(game)" draggable="true">
+            @if ($index < 9) { <span class="position">0{{ $index +1 }}</span>
+                } @else {
+                <span class="position">{{ $index +1 }}</span>
+                }
+                <img src="{{ game.imgUrl }}" alt="">
+                <div class="info">
+                    <h3>{{ game.title }}</h3>
+                    <p class="short-description">{{ game.shortDescription }}</p>
+                    <p class="year">{{ game.year }}</p>
+                </div>
+        </li>
+        } -->
+    </ul>
+</div>

@@ -1,19 +1,24 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { CollectionsComponent } from './pages/collections/collections.component';
-import { GameComponent } from './pages/game/game.component';
+import { GameListPage } from './pages/game-list-page/game-list-page.component';
+import { GamePage } from './pages/game-page/game-page.component';
+import { StarterPage } from './pages/starter-page/starter-page.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        pathMatch: 'full',
+        component: StarterPage
     },
     {
-        path: 'collections',
-        component: CollectionsComponent
+        path: 'jogos',
+        component: GameListPage
     },
     {
-        path: 'game',
-        component: GameComponent
+        path: 'jogos/:collection-name',
+        component: GameListPage
+    },
+    {
+        path: 'jogos/:collection-name/:game-name',
+        component: GamePage
     }
 ];

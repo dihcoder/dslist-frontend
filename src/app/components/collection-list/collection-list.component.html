@@ -1,0 +1,14 @@
+<ul class="collection-list">
+    @if (collectionItems().length) {
+
+    @for (collection of collectionItems(); track collection.id;) {
+    <li class="collection-name" [class.active]="selectedItem === collection" (click)="handleClick(collection)">
+        {{ collection.name }}
+    </li>
+    }
+
+    } @else {
+    <li class="no-collections">Nenhuma coleção encontrada</li>
+    }
+
+</ul>

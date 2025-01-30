@@ -1,0 +1,87 @@
+// Variables for common styles
+$font-primary: "Crimson Pro";
+$font-secondary: "Poppins";
+$text-accent: var(--text-accent);
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+
+// Mixin for text styles
+@mixin text-style($font-family, $size, $weight, $color: inherit) {
+    font-family: $font-family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+.game-details {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 40px 0;
+
+    header.container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+
+        .header-txts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h1 {
+                @include text-style($font-primary, 36px, 700);
+            }
+
+            p {
+                @include text-style($font-primary, 22px, 400, $text-secondary);
+
+                .collection-name {
+                    cursor: pointer;
+                    @include text-style($font-primary, inherit, 700, $text-accent);
+                }
+            }
+        }
+
+        button {
+            background: var(--primary-color);
+            @include text-style($font-primary, 18px, 400);
+            padding: 10px 40px;
+            border-radius: 5px;
+            margin-bottom: auto;
+            cursor: pointer;
+        }
+    }
+
+    .game {
+        display: flex;
+        gap: 40px;
+
+        img {
+            width: 220px;
+            margin-bottom: auto;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .year, .genre, .platforms {
+                @include text-style($font-primary, 24px, 400, $text-accent);
+
+                .content {
+                    color: $text-primary;
+                }
+            }
+
+            .name {
+                @include text-style($font-primary, 30px, 700);
+            }
+
+            .short-description, 
+            .long-description {
+                @include text-style($font-secondary, 18px, 400, $text-secondary);
+            }
+        }
+    }
+}

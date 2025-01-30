@@ -1,0 +1,25 @@
+<main class="game-details">
+    <header class="container">
+        <div class="header-txts">
+            <h1>Detalhes do Jogo</h1>
+            <p>Na coleção <span class="collection-name">{{ collection().name }}</span></p>
+        </div>
+        <app-button text="Ver Coleções" cssClass="btn-primary" (onClick)="navigateToGameList()"></app-button>
+    </header>
+    <section class="container">
+        @if (gameIsLoaded()) {
+        <article class="game">
+            <img [src]="game().imgUrl" [alt]="game().title + ' game title'">
+            <div class="info">
+                <p class="year">{{ game().year }}</p>
+                <h2 class="name">{{ game().title }}</h2>
+                <p class="genre">Gênero: <span class="content">{{ game().genre }}</span></p>
+                <p class="platforms">Plataforma: <span class="content">{{ game().platforms }}</span></p>
+                <app-ratings [score]="game().score" />
+                <p class="short-description">{{ game().shortDescription }}</p>
+                <p class="long-description">{{ game().longDescription }}</p>
+            </div>
+        </article>
+        }
+    </section>
+</main>
