@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-initial-page',
   imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: './initial-page.component.html',
+  styleUrl: './initial-page.component.scss'
 })
-export class HomeComponent {
+export class InitialPageComponent {
   constructor (private router: Router) {}
 
-  openCollections() {
+  openGameList() {
     this.router.navigate(['collections'])
   }
 }
