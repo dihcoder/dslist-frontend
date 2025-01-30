@@ -1,60 +1,29 @@
 # dslist-frontend
-Frontend em Angular para consumir a API do projeto DSList Backend (intensivção Java Spring da Dev Superior)
+Website Frontend em Angular para consumir a API do projeto DSList Backend (intensivção Java Spring da Dev Superior)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
+### Principais Funcionalidades
 
-## Development server
+- Listar jogos ordenados por coleções
+- Modificar a ordem de um jogo através de 'arrasta e solta'
+- Visualizar todas as informações de um jogo clicado
 
-To start a local development server, run:
+### Ferramentas e Dependências Utilizadas
+
+- [Angular](https://angular.dev/) v19.1.0
+- [Angular CLI](https://github.com/angular/angular-cli) v19.1.3
+- [SCSS](https://sass-lang.com/)
+- [Node.js](https://nodejs.org/pt)
+
+
+### Como Executar a Aplicação Localmente
+
+- **OBS. 1:**: É preciso ter a aplicação [dslist-backend](https://github.com/dihcoder/dslist-backend) rodando localmente.
+- **OBS. 2:**: É preciso ter o [Node.js](https://nodejs.org/pt) instalado em sua máquina. 
+- Para iniciar a aplicação localmente, execute:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois que o servidor estiver em execução, abra seu navegador e navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente sempre que você modificar qualquer um dos arquivos de origem.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
