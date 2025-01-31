@@ -11,6 +11,6 @@ export class InitialPageComponent {
   constructor (private router: Router) {}
 
   openGameList() {
-    this.router.navigate(['collections'])
+    this.router.navigate(['jogos'])
   }
 }
