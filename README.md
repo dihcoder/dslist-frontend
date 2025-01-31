@@ -1,4 +1,7 @@
-# dslist-frontend
+# DSList Front-End
+
+![dslist-initial_page](https://github.com/user-attachments/assets/3ebe7d0a-2409-4993-a830-1872af1d4b8e)
+
 Website Frontend em Angular para consumir a API do projeto DSList Backend (intensivção Java Spring da Dev Superior)
 
 ### Principais Funcionalidades
