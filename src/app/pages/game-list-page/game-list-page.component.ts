@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-list-page',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './game-list-page.component.scss'
 })
 export class GameListPageComponent {
+
+  constructor(private router: Router) {}
+
+  handleGameClick() {
+    this.router.navigate(['jogos/colecao/jogo'])
+  }
 
 }
