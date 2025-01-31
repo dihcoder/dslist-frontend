@@ -1,0 +1,94 @@
+@import '../../variables.scss';
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    h1 {
+        font-family: $font-primary;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    button {
+        background: $color-primary;
+        font-family: $font-primary;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px 40px;
+        border-radius: 5px;
+        margin-bottom: auto;
+        cursor: pointer;
+    }
+}
+
+h3 {
+    font-family: $font-primary;
+    font-size: 22px;
+    color: $color-text-secondary;
+    font-weight: 400;
+    margin: 10px 0;
+
+    .collection-name {
+        font-family: $font-primary;
+        font-size: inherit;
+        font-weight: 700;
+        color: $color-text-accent;
+        cursor: pointer;
+    }
+}
+
+
+.game {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+
+    img {
+        width: 220px;
+        margin-bottom: auto;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .year, .genre, .platforms {
+            font-family: $font-primary;
+            font-size: 24px;
+            font-weight: 400;
+            color: $color-text-accent;
+
+            .content {
+                color: $color-text-primary;
+            }
+        }
+
+        .ratings {
+            display: flex;
+            gap: 5px;
+
+            img {
+                width: 22px;
+                height: auto;
+            }
+        }
+
+        .name {
+            font-family: $font-primary;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .short-description, 
+        .long-description {
+            font-family: $font-secondary;
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-text-secondary;
+        }
+    }
+}
+
